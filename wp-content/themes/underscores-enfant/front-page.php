@@ -94,7 +94,8 @@ do_action( 'astral_breadcrumb_area' );
 ?>
 </div>
 </section>
-
+<div class="a-link-evn container">
+    <a href="category/evenement/">regardez nos évènements</a>
+</div>
 <?php
-get_template_part( 'template-parts/content', 'page-evn' );
 get_footer(); ?>

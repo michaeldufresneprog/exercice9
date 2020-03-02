@@ -152,6 +152,29 @@ a {
   text-decoration: none;
 }
 
+.section-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  -ms-grid-rows: (20px [col-start])[31];
+      grid-template-rows: repeat(31, 20px [col-start]);
+}
+
+.a-link-evn {
+  margin-top: 40px;
+}
+
+.structure-evenement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.p-tittle {
+  margin-right: 10px;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

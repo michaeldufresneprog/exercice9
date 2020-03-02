@@ -43,6 +43,20 @@
 a{
     text-decoration: none;
 }
+.section-grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: repeat(31, 20px [col-start]);
+}
+.a-link-evn{
+    margin-top: 40px;
+}
+.structure-evenement{
+    display: flex;
+}
+.p-tittle{
+    margin-right: 10px;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
