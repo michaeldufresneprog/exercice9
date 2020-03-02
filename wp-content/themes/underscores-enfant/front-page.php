@@ -60,7 +60,7 @@ do_action( 'astral_breadcrumb_area' );
         wp_reset_postdata();
         ?>
         <h1>Voici les dernières nouvelles</h1>
-        <div class="div-evn">
+        <div class="div-nouvelle">
         <?php
         $query = new WP_Query( array( 'category_name' => "nouvellle",
         'posts_per_page' => 4));
@@ -86,7 +86,7 @@ do_action( 'astral_breadcrumb_area' );
             echo "no found";
         }
         wp_reset_postdata();
-        //get_template_part( 'template-parts/content', 'page-acc' );
+        
         //echo get_the_title();
         // If comments are open or we have at least one comment, load up the comment template.
 
@@ -94,5 +94,7 @@ do_action( 'astral_breadcrumb_area' );
 ?>
 </div>
 </section>
+
 <?php
+        get_template_part( 'template-parts/content', 'page-evn' );
 get_footer(); ?>
