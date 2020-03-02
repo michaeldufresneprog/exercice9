@@ -96,5 +96,5 @@ do_action( 'astral_breadcrumb_area' );
 </section>
 
 <?php
-        get_template_part( 'template-parts/content', 'page-evn' );
+get_template_part( 'template-parts/content', 'page-evn' );
 get_footer(); ?>
