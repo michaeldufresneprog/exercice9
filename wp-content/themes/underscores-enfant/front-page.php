@@ -62,22 +62,22 @@ do_action( 'astral_breadcrumb_area' );
         <h1>Voici les dernières nouvelles</h1>
         <div class="div-evn">
         <?php
-        $query = new WP_Query( array( 'category_name' => "evenement",
+        $query = new WP_Query( array( 'category_name' => "nouvellle",
         'posts_per_page' => 4));
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
 					$query->the_post();
 					?><div class = "structure-nouvelle">
-					<?php
-                    //echo '<p>' . the_excerpt() . '</p>';
-					the_post_thumbnail("thumbnail");
-					?>
-					<div>
-					<?php
-						echo '<h1>' . get_the_title() .  '</h1>';
-                        //echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
-					?>
-					</div>
+                        <?php
+                        //echo '<p>' . the_excerpt() . '</p>';
+                        the_post_thumbnail("thumbnail");
+                        ?>
+                        <div>
+                        <?php
+                            echo '<h1><a href="'.get_permalink( $id ).'">' . get_the_title() .  '</a></h1>';
+                            //echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
+                        ?>
+                        </div>
 					</div>
 					<?php
                 }

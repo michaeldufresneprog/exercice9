@@ -30,6 +30,8 @@
 }
 .structure-nouvelle{
     flex: 1 1 25%;
+    display: flex;
+    flex-direction: column-reverse;
 }
 .container{
     width: 1200px;
@@ -37,6 +39,9 @@
 }
 .div-evn{
     display: flex;
+}
+a{
+    text-decoration: none;
 }
 /*--------------------------------------------------------------
 ## Comments
