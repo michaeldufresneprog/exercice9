@@ -1,5 +1,5 @@
 <section class="container">
-<h1>Voici les dernières nouvelles</h1>
+<h1>Nos événements important cette année</h1>
         <div>
         <?php
         $query = new WP_Query( array( 'category_name' => "nouvellle",
