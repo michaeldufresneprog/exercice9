@@ -47,7 +47,7 @@ do_action( 'astral_breadcrumb_area' );
 					<div>
 					<?php
 						echo '<h1>' . get_the_title() .  '</h1>';
-						echo '<p>' . get_the_date() . '</p>';
+                        echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
 					?>
 					</div>
 					</div>

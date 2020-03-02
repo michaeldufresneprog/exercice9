@@ -105,6 +105,7 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin-left: 10px;
 }
 
 .structure-conference div h1 {
