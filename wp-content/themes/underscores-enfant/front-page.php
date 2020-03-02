@@ -58,6 +58,33 @@ do_action( 'astral_breadcrumb_area' );
             echo "no found";
         }
         wp_reset_postdata();
+        ?>
+        <h1>Voici les dernières nouvelles</h1>
+        <?php
+        $query = new WP_Query( array( 'category_name' => "conference",
+        'posts_per_page' => 3));
+        if ( $query->have_posts() ) {
+            while ( $query->have_posts() ) {
+					$query->the_post();
+					?><div class = "structure-conference">
+					<?php
+                    //echo '<p>' . the_excerpt() . '</p>';
+					the_post_thumbnail("thumbnail");
+					?>
+					<div>
+					<?php
+						echo '<h1>' . get_the_title() .  '</h1>';
+                        echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
+					?>
+					</div>
+					</div>
+					<?php
+                }
+        } 
+        else {
+            echo "no found";
+        }
+        wp_reset_postdata();
         //get_template_part( 'template-parts/content', 'page-acc' );
         //echo get_the_title();
         // If comments are open or we have at least one comment, load up the comment template.
