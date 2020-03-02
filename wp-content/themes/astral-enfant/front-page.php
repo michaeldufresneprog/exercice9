@@ -46,14 +46,14 @@ do_action( 'astral_breadcrumb_area' );
 ?>
 <section class="container">
     <h2 class=>les dernières nouvelles</h2>
-    <p>Je suis modifié par le front-page .php</p>
+    <!--<p>Je suis modifié par le front-page .php</p>-->
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
 
     <?php
     while ( have_posts() ) :
         the_post();
-        $query = new WP_Query( array( 'category_name' => "devoir",
+        $query = new WP_Query( array( 'category_name' => "nouvellle",
         'posts_per_page' => 3));
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
@@ -80,7 +80,7 @@ do_action( 'astral_breadcrumb_area' );
             echo "no found";
         }
         wp_reset_postdata();
-        //get_template_part( 'template-parts/content', 'page-acc' );
+        get_template_part( 'template-parts/content', 'page-acc' );
         //echo get_the_title();
         // If comments are open or we have at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) :
@@ -90,5 +90,4 @@ do_action( 'astral_breadcrumb_area' );
     endwhile; // End of the loop.
 ?>
 </section>
-<?php
 get_footer(); ?>

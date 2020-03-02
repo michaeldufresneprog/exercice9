@@ -1,0 +1,24 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+
+.structure-conference{
+    display: flex;
+    margin-bottom: 2vh;
+}
+.structure-conference div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.structure-conference div h1{
+    margin-top: 0;
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+//@import "primary/comments";
