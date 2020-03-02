@@ -22,26 +22,7 @@ do_action( 'astral_top_banner' );
 do_action( 'astral_breadcrumb_area' );
 ?>
 
-<div id="content">
-    <section class="align-blog" id="blog">
-        <div class="container">
-            <div class="row">
-                <!-- left side -->
-                <div class="col-lg-8 single-left mt-lg-0 mt-4">
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-						get_template_part( 'post', 'page' );
-					endwhile;
-					endif;
-					?>
-                </div>
-                <!-- right side -->
-                <div class="col-lg-4 event-right">
-					<?php get_sidebar(); ?>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+<?php underscores_post_thumbnail(); ?>
 <?php
 ?>
 <section class="container">
@@ -80,9 +61,6 @@ do_action( 'astral_breadcrumb_area' );
         //get_template_part( 'template-parts/content', 'page-acc' );
         //echo get_the_title();
         // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
 
     endwhile; // End of the loop.
 ?>
