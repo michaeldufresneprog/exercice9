@@ -28,9 +28,15 @@
 .post-thumbnail img{
     width: 100%;
 }
+.structure-nouvelle{
+    flex: 1 1 25%;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
+}
+.div-evn{
+    display: flex;
 }
 /*--------------------------------------------------------------
 ## Comments

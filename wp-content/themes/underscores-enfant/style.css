@@ -124,9 +124,21 @@
   width: 100%;
 }
 
+.structure-nouvelle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.div-evn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*--------------------------------------------------------------

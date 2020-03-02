@@ -60,13 +60,14 @@ do_action( 'astral_breadcrumb_area' );
         wp_reset_postdata();
         ?>
         <h1>Voici les dernières nouvelles</h1>
+        <div class="div-evn">
         <?php
-        $query = new WP_Query( array( 'category_name' => "conference",
-        'posts_per_page' => 3));
+        $query = new WP_Query( array( 'category_name' => "evenement",
+        'posts_per_page' => 4));
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
 					$query->the_post();
-					?><div class = "structure-conference">
+					?><div class = "structure-nouvelle">
 					<?php
                     //echo '<p>' . the_excerpt() . '</p>';
 					the_post_thumbnail("thumbnail");
@@ -74,7 +75,7 @@ do_action( 'astral_breadcrumb_area' );
 					<div>
 					<?php
 						echo '<h1>' . get_the_title() .  '</h1>';
-                        echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
+                        //echo '<a href="'.get_permalink( $id ).'">' . get_the_date() . '</a>';
 					?>
 					</div>
 					</div>
@@ -91,6 +92,7 @@ do_action( 'astral_breadcrumb_area' );
 
     endwhile; // End of the loop.
 ?>
+</div>
 </section>
 <?php
 get_footer(); ?>
