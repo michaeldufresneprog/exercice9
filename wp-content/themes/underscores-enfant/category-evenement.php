@@ -25,10 +25,11 @@
                             break;
                         default:
                     }
+                    $jour++;
                     $stylB = "grid-row-end:" .  $jour;
                     $stylA = "grid-column-start:" . $mois;
                     $texte = $stylB . ";" . $stylA;
-					?><div style="<?php echo $texte ?>" class = "structure-evenement">
+					?><div class="border-div" style="<?php echo $texte ?>" class = "structure-evenement">
                         <?php
                             echo '<p class="p-tittle"><a href="'.get_permalink( $id ).'">' . get_the_title() .  '</a></p>';
                             echo "<p>" . get_the_date() . "</p>";
